@@ -86,9 +86,9 @@ if(!isset($_GET['show']) && empty($_GET['show'])){
 					<?php 
 						if(isset($_SESSION['gethistory']) && !empty($_SESSION['gethistory']))
 						{ 
-						/* echo "<pre>";
-						print_r($_SESSION['gethistory']);die; */
+						
 						foreach($_SESSION['gethistory'] as $k=>$v){
+							
 					?>
 						<tr>
 							<td><?php echo $v['city']; ?></td>

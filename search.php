@@ -6,7 +6,7 @@
         if(isset($_POST['submit'])) { 
 			//get the weather of city			
 			$WeatherTemp = $openweathermap->getWeatherByCity($_POST['city']);  
-			$bdd = new db();			
+			$bdd = new DB();			
 				/* echo "<pre>";
 				print_r($WeatherTemp);die("asdasdasd");  */
 			if(isset($WeatherTemp) && !empty($WeatherTemp)){

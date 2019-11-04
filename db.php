@@ -16,11 +16,11 @@ class DB {
 		$this->password = ''; //password
 		$this->baseName = 'weatherdb'; //name of your database
 		$this->port = '3306'; */
-		 $this->host = 'eu-cdbr-west-02.cleardb.net'; //hostname
+		$this->host = 'eu-cdbr-west-02.cleardb.net'; //hostname
 		$this->user = 'bf7ac01f4bcbf4'; //username
 		$this->password = 'af4b9ffa'; //password
 		$this->baseName = 'heroku_8f9566cac9200c2'; //name of your database
-		$this->port = '3306';
+		$this->port = '3306'; 
 		$this->debug = true;
 		$this->connect();
 	}
