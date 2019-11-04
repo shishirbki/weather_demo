@@ -88,11 +88,11 @@ if(!isset($_GET['show']) && empty($_GET['show'])){
 						{ 
 						
 						foreach($_SESSION['gethistory'] as $k=>$v){
-							
+							//echo $v['weather_date'];die;
 					?>
 						<tr>
 							<td><?php echo $v['city']; ?></td>
-							<td><?php echo date('Y-m-d H:i:s',strtotime($v['weather_date'])); ?></td>
+							<td><?php echo date('Y-m-d h:i A',$v['weather_date']); ?></td>
 							<td><?php echo $v['weather']; ?></td>
 							<td><?php echo ROUND((($v['temprature'] - 32) * 5/9),2).'&deg;C'; ?></td>
 							<td><?php echo ROUND((($v['temp_min'] - 32) * 5/9),2).'&deg;C'. ' / '.ROUND((($v['temp_max'] - 32) * 5/9),2).'&deg;C'; ?></td>
