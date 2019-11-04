@@ -15,7 +15,7 @@ if(!empty($data)){
 		print_r($WeatherTemp);die; */
 	if(isset($WeatherTemp) && !empty($WeatherTemp)){
 		$_SESSION['gethistory'][0]['city'] = $WeatherTemp['name'];
-		$_SESSION['gethistory'][0]['weather_date'] = $WeatherTemp['dt'];
+		$_SESSION['gethistory'][0]['weather_date'] = date('Y-m-d H:i:s',strtotime($v['weather_date']));
 		$_SESSION['gethistory'][0]['weather'] = $WeatherTemp['weather'][0]['main'];
 		$_SESSION['gethistory'][0]['temprature'] = $WeatherTemp['main']['temp'];
 		$_SESSION['gethistory'][0]['temp_min'] = $WeatherTemp['main']['temp_min'];
